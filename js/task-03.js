@@ -13,12 +13,8 @@ const images = [
     },
 ]
 
-// створюю пустий масив, звертаючись до пустого списку з класом .gallery
 const ulEL = document.querySelector('.gallery')
 
-// за допомогою методу forEach перебираю масив images, та методом insertAdjacentHTML
-// і за допомогою шаблонної строки кожен наступний елемент перебору перед попереднім елементом
-// проходження циклу, додаючи результат в DOM-дерево.
 images.forEach((el) => {
     ulEL.insertAdjacentHTML(
         'afterbegin',
