@@ -13,11 +13,15 @@ const images = [
     },
 ]
 
-const ulEL = document.querySelector('.gallery')
+const ulRef = document.querySelector('.gallery')
+ulRef.style.gap = '30px'
+ulRef.style.display = 'flex'
+ulRef.style.flex = 'wrap'
 
-images.forEach((el) => {
-    ulEL.insertAdjacentHTML(
-        'afterbegin',
-        `<li><img src = "${el.url}" alt = "${el.alt}" width = "250" height = "140"/></li>`
+const markup = images
+    .map(
+        (image) =>
+            `<li class= "items"><img  class="imgEl" src= ${image.url} alt = ${image.alt} width = "640"></li>`
     )
-})
+    .join('')
+ulRef.insertAdjacentHTML('beforeend', markup)

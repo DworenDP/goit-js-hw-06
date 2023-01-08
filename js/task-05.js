@@ -1,11 +1,9 @@
-let inputEl = document.querySelector('#name-input')
-inputEl.addEventListener('input', onInputChange)
+const textInput = document.getElementById('name-input')
+const output = document.querySelector('#name-output')
+const text = output.textContent
 
-let outputEl = document.querySelector('#name-output')
-
-function onInputChange(event) {
-    inputEl = event.currentTarget.value
-    console.log(inputEl)
-
-    inputEl !== ' ' ? (outputEl.innerText = inputEl.trim()) : 'Anonymous'
-}
+textInput.addEventListener('input', (event) => {
+    if (event.currentTarget.value === '') {
+        output.textContent = text
+    } else output.textContent = event.currentTarget.value
+})
