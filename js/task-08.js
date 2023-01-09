@@ -1,4 +1,4 @@
-const form = document.getElementsByClassName('login-form')
+const form = document.querySelector('.login-form')
 
 form.addEventListener('submit', handleSubmit)
 
